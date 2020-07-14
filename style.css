@@ -1,5 +1,147 @@
 body {
-  background-color: aqua;
+  font-family: "Inter", sans-serif;
+}
+
+.wrapper {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2332;
+  padding: 100px;
+  padding-top: 20px;
+}
+
+.content {
+  background-color: #1e202a;
+}
+
+.toggle-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-wrapper__title {
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.side--title {
+  text-transform: capitalize;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.side--subtitle {
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: 700;
+  color: #777777;
+}
+
+.label {
+  background: linear-gradient(to right, #4192D3 10%, #3CCC8C);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 26px;
+  width: 50px;
+  border-radius: 50px;
+  padding: 5px;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+}
+
+.ball {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s linear;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+body.dark {
+  background-color: #454545;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 50px;
+  padding-right: 50px;
+  transform: translate(0, -60px);
+}
+
+.card {
+  background-color: #252a41;
+  text-align: center;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.card--link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: unset;
+  text-decoration: none;
+  color: #777777;
+}
+
+.card--title {
+  font-weight: 700;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.card--subtitle {
+  color: #777777;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.card--link__name {
+  margin-left: 10px;
+}
+
+.card--time {
+  color: #1EB589;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.card:last-child .card--time {
+  color: #DC414C;
 }
 
 .attribution {
